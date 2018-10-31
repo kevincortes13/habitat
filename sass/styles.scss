@@ -1,0 +1,675 @@
+/*
+	PALETA DE COLORES
+*/
+$color-green: #19766C; //VERDE OSCURO
+$color-gray: #5D5D5D; //GRIS
+$color-white: #FFF; //BLANCO
+$color-green2: #86BB6E; //VERDE CLARO
+
+$color-caja: #C7D684; //VERDE DE LAS CAJAS DETRAS DE LAS IMAGENES
+
+$color-btn: #80b47c; //Color de los botones
+
+$color-gray-light: #EFEFEF; //GRis claro
+
+
+
+
+
+/*
+	FONT 
+*/
+@font-face{
+	font-family: 'Quicksand' !important;
+	src: url('../font/Quicksand/Quicksand-Bold.ttf'),
+		url('../font/Quicksand/Quicksand-Light.ttf'),
+		url('../font/Quicksand/Quicksand-Medium.ttf'),
+		url('../font/Quicksand/Quicksand-Regular.ttf');
+}
+@font-face {
+    font-family: akzidenzgroteskbq;
+    font-weight: 700;
+    src: url("../fonts/akzidenzgroteskbq-bdcnd.otf") format("opentype");
+}
+@font-face {
+    font-family: akzidenzgroteskbq;
+    font-weight: 500;
+    src: url("../fonts/akzidenzgroteskbq-cnd.otf") format("opentype");
+}
+/*
+	ESTILOS GENERALES Colores y background
+*/
+.green-color {
+    color: $color-green !important;
+}
+.bg-green-color {
+    background-color: $color-green !important;
+}
+.gray-color {
+    color: $color-gray !important;
+}
+.white-color {
+    color: $color-white !important;
+}
+.bg-white-color {
+    background-color: $color-white !important;
+}
+.green2-color{
+	color: $color-green2 !important;
+}
+.bg-green2-color{
+	background-color: $color-green2 !important;
+}
+.bg-cajas{
+	background-color: $color-caja !important;
+}
+.color-btn{
+	color: $color-btn !important;
+}
+.bg-btn{
+	background-color: $color-btn !important;
+}
+.bg-gray-light{
+    background-color: $color-gray-light !important;
+}
+.quicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+.akz{
+	font-family: 'akzidenzgroteskbq', sans-serif;
+}
+.font-bold {
+    font-weight: 700;
+}
+.font-custom {
+    font-weight: 500;
+}
+/* configuracion de boton */
+.btn{
+	border-radius: 50px !important;
+	letter-spacing: 1px !important;
+	font-size: 1.375rem !important;
+	padding: .25rem 1.5rem;
+	&:hover{
+		color: $color-white !important;
+		background-color: $color-green !important;
+	}
+}
+/* Style Social Media Buttons*/
+.fa {
+  padding: 5px !important;
+  //font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 5px 0 0;
+  border: 1px solid $color-green;
+  border-radius: 50%;
+  &:hover{
+  	color: $color-white !important;
+  	border: 1px solid $color-green2 !important;
+  	background-color: $color-green2;
+  }
+}
+/* Agregue un efecto de desplazamiento si se desea */
+.fa:hover {
+    color: #C7D684;
+    border-color: #C7D684;
+}
+footer .fa:hover {
+    text-decoration: none;
+}
+
+
+/*
+	SECCION NAVBAR
+*/
+/* barra top green */
+.barra-green{
+	background-color: $color-green !important;
+	color: $color-white;
+	font-family: 'Quicksand', sans-serif !important;
+	font-size: 1rem !important;
+	padding: 5px 20px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+/* sombra al navbar */
+.sticky-top{
+	box-shadow: 0px 1px 1px rgba(0,0,0,0.15);
+}
+/* configuraciones internas del navbar */
+nav {
+	#navbarNav{
+		padding-left: 70px !important;
+	}
+	ul li a{
+		transition: all .5s ease;
+		padding-bottom: 0 !important;
+		border-bottom: 4px dotted $color-white;
+		&:hover{
+			color: $color-green2 !important;
+			border-bottom: 4px dotted $color-green2;	
+		}
+	}
+
+	.dropdown-menu-confi{
+		/* anchura del menu de servicios */
+		width: 250px;
+	}
+}
+
+/*
+	SECCION 1
+*/
+/* 
+	configuracion del texto en la seccion 1
+ */
+.seccion1{
+	.text-confi{
+		top: 155px;
+		left: 10px;
+	}
+	& h1{
+
+		font-size: 6.8rem;
+		line-height: 98px;
+		margin-left: -14px;
+		letter-spacing: 5px;
+	}
+	& h4{
+		font-size: 1.375rem;
+		line-height: 23px;
+		letter-spacing: 1px;
+		margin: -10px 0 30px -5px;
+	}
+	&-caja{
+		/* sombra a la caja */
+		box-shadow: 1px 1px 15px 1px #afafaf;
+		margin-top: -70px;
+		padding: 30px 0;
+		height: 157px;
+	}
+	h2{
+		/* configuracion del texto de la caja con sombra */
+		font-size: 2.5rem;
+		.titulo,.subtitulo{
+			letter-spacing: 2px;
+		}
+		.hoja-izq{
+			left: 40px;
+			top: 20px;
+		}
+		.hoja-dere{
+			right: 40px;
+			top: 20px;
+		}
+	}
+}
+/* responsive a 991 de los textos, titulos, subtitulos */
+@media screen and (max-width: 991px) {
+	.seccion1{
+		.text-confi{
+			top: 105px;
+		}
+		& h1{
+			font-size: 5.8rem;
+			line-height: 80px;
+		}
+		& h4{
+			font-size: 1rem;
+			line-height: 20px;
+			letter-spacing: 2px;
+		}
+		h2{
+			font-size: 1.5rem;
+			.titulo,.subtitulo{
+				letter-spacing: 1px;
+			}
+			.hoja-izq{
+				left: 20px;
+				top: 20px;
+			}
+			.hoja-dere{
+				right: 20px;
+				top: 20px;
+			}
+		}		
+	}
+}
+/* Responsive a 750 del texto de la seccion 1 */
+@media screen and (max-width: 750px) {
+	.seccion1{
+		h2{
+			font-size: 1rem;
+			.titulo,.subtitulo{
+				letter-spacing: 1px;
+			}
+			.hoja-izq,.hoja-dere{
+				display: none;
+			}
+		}		
+	}
+}
+/* SECCION 2*/
+/* configuracion de textos, cajas green derecha y izquierda */
+.seccion2{
+	&-hoja-izq{
+		/* configuracion para posar la hoja a la izquierda */
+		top: 0;
+		left: 0;
+		z-index: -3;
+		margin-left: -15px;
+	}
+	&-hoja-dere{
+		/* configuracion para posar la hoja a la derecha*/
+		top: 0;
+		right: 0;
+		z-index: -3;
+	}
+	& h2{
+		font-size: 1.5rem;
+		line-height: 40px;
+	}
+	& h3{
+		font-size: 1.8rem;
+		line-height: 25px;
+		letter-spacing: 2px;
+	}
+	.borde-dere{
+		border-right: 1px solid $color-green;
+	}
+	.borde-izq{
+		border-left: 1px solid $color-green;
+	}
+	& .caja-green-izq{
+		/* caja verde configuracion */
+		height: 500px;
+		left: 0;
+		z-index: -1;
+	}
+	& .caja-green-dere{
+		/* caja verde configuracion */
+		height: 500px;
+		right: 0;
+		z-index: -1;
+	}
+	& .borde-boton{
+		/* propiedades del borde que decora el boton con la imagen */
+		z-index: -1;
+		bottom: -65px;
+		&-green{
+			border: 3px solid $color-btn;
+			height: 300px;
+			& .conoce-mas{
+				bottom: -20px;
+				left: 0;
+				font-size: 1rem;
+			}
+		}
+	}
+	#servicios-adicionales{
+		margin-top: 10rem;
+	}
+}
+
+/* Responsive de las hojas laterales de los servicios
+	y disminucion de las cajas
+*/
+@media screen and (max-width: 1200px) {
+	.seccion2{
+		&-hoja-izq, &-hoja-dere{
+			opacity: 0.2;
+		}
+		& .caja-green-izq, & .caja-green-dere{
+			height: 300px;
+		}
+	}
+}
+/*
+Responsive de los textos y ocultamiento de las cajas green
+*/
+@media screen and (max-width: 750px) {
+	.seccion2{
+		& h2{
+			font-size: 1rem;
+		}
+		& h3{
+			font-size: 1.2rem;
+		}
+		.borde-dere{
+			border-right: 1px solid $color-green;
+		}
+		.borde-izq{
+			border-left: 1px solid $color-green;
+		}
+		& .caja-green-izq{
+			display: none;
+		}
+		& .caja-green-dere{
+			display: none;
+		}
+		& .borde-boton{
+			&-green{
+				height: 100px;
+			}
+		}	
+	}
+}
+/* Seccion 3 - 10 años*/
+/*
+ configuracion de imagen, parrafos, textos y botones
+ */
+.seccion3{
+	margin-top: 250px;
+	.img-inf{
+		bottom: 0;
+		right: 50px;
+	}
+	.parrafo{
+		text-align: left;
+		margin: 85px 0 80px 0;
+		& p{
+			font-size: 1rem;
+			max-width: 560px;
+			letter-spacing: 1px;
+			line-height: 20px;
+			margin-bottom: 8px;
+		}
+		& a{
+			span{
+			font-size: 2rem;
+			}
+			&:hover{
+				text-decoration: none;
+			}	
+		}
+		#parrafo-hide{
+			opacity: 1;
+			display: none;
+		}
+	}
+	.anos{
+		margin: 80px 0;
+		img{
+		margin-left: 150px;
+		}
+	}	
+}
+/*responsive configuracion de la imagen de 10 años 
+*/
+@media screen and (max-width: 750px) {
+	.seccion3{
+		& .anos{
+			margin: 40px 0;
+			& img{
+			margin-left: 50px;
+			}
+		}
+	}
+}
+/*responsive configuracion de la imagen de 10 años 
+*/
+@media screen and (max-width: 600px) {
+	.seccion3{
+		& .anos{
+			margin: 20px 0;
+			& img{
+			margin-left: 25px;
+			}
+		}
+	}
+}
+/* seccion 4 - galeria */
+/* configuracion haciendo que la seccion solo llega a un max de 1366px
+	para que no se pierda la configuracion de las imagenes en esta seccion
+ */
+.galeria-container {
+    max-width: 1366px;
+    margin: auto !important;
+    margin-top: -10px !important;
+}
+/* Seccion 5 - videos*/
+/* configuracion de videos*/
+.seccion5{
+	& .galeria-container{
+		margin-top: 40px !important;
+	}
+}
+/* Seccion 6 - noticias*/
+/* coniguracion de imagenes textos y etiquetas */
+.seccion6{
+	margin-top: 100px;
+	.caja-img1{
+		margin-top: 50px;
+		height: 330px;
+		overflow: hidden;
+		& .img1{
+			margin-top: -20%;
+		}
+		& .texto1{
+			top: 100px;
+				.fecha{
+					letter-spacing: 1px;
+				}
+				.tittle{
+					font-size: 1.875rem;
+				}
+		}
+		& .texto2{
+			.fecha{
+				letter-spacing: 1px;
+			}
+			.tittle{
+				font-size: 1.25rem;
+			}
+		}
+
+	}
+	.etiquetas{
+		/*
+			econfiguracion de etiquetas
+			ejemplo: servicio, salud, bienestar...
+		*/
+		font-size: 0.78rem;
+		margin-bottom: 8px;
+		letter-spacing: 2px;
+		transition: all 0.5s !important;
+		padding: .25rem 1rem;
+		margin-right: 10px;
+		background-color: $color-btn;
+		a{
+			color: $color-white;
+
+			&:hover{
+				text-decoration: none;
+			}
+		}
+		&:hover{
+			background-color: $color-green;
+		}
+	}
+	a:hover{
+		img{
+			filter: sepia(50%);
+		}
+	}
+
+	img{
+		transition: all 0.5s !important;
+		filter: brightness(65%);
+	}
+}
+/* 
+Para que el texto que esta dentro de la noticia 1
+ya no se pose encima de la imagen
+sino debajo de ella y se aprece mejor
+*/
+@media screen and (min-width: 768px){
+	.seccion6{
+		.position-md-absolute{
+			position: absolute !important;
+		}
+	}
+}
+/* configuracion responsive de los textos
+	como tamaños, color.
+ */
+@media screen and (max-width: 767px){
+	.seccion6{
+		& .texto1{
+			.fecha{
+				color: $color-gray !important;
+			}
+			.tittle{
+				font-size: 1rem !important;
+				color: $color-gray !important;
+			}
+		}
+		& .texto2{
+			.fecha{
+				font-size: 12px;
+				letter-spacing: 1px;
+			}
+			.tittle{
+				font-size: .8rem;
+			}
+		}
+		.ml-5{
+			margin-left: .8rem !important;
+		}
+		.mr-5{
+			margin-right: .8rem !important;
+		}
+	}
+}
+/* Seccion 7 - aliados*/
+/* configuracion de aliados con el 
+	after del borde a la izquierda
+ */
+.seccion7{
+	.brd-l{
+		&::after{
+			content: '';
+			height: 80px;
+			border-left: 1px solid #5D5D5D !important;
+			top: 10px;
+			position: absolute;	
+		}
+	}
+
+}
+/* 
+ocultando el borde a la izquierda en responsive de 991
+*/
+@media screen and (max-width: 991px){
+	.seccion7{
+		.brd-l{
+			&::after{
+				border-left: 0px !important;	
+			}
+		}
+		
+	}
+}
+/* Seccion 8 - contacto*/
+/* configuracion de la seccion de contacto */
+.seccion8{
+	.contacto{
+		/* bg de la seccion de contacto */
+		background-image: url('../img/contacto.jpg');
+		background-size: cover;
+	}
+	& .caja-contacto{
+		/* configuracion de posicionamiento de 
+		la caja verde  contacto*/
+		opacity: .92 !important;
+		padding: 90px 20px;
+		margin-top: 70px;
+		padding-left: 18%;
+		&-text1{
+			/* configuracion del primer texto de la cajad e contacto */
+			letter-spacing: 2px;
+			font-size: 1rem;
+			text-align: left;
+		}
+		&-text2{
+			/* configuracion del segundo texto de la cajad e contacto */
+			letter-spacing: 3px;
+			font-size: 2rem;
+			text-align: left;
+		}
+	}
+	/* redondiando los inputs y el textarea */
+	& input,& textarea{
+		border-radius: 25px !important;
+	}
+
+}
+/* seccion 9 - footer*/
+/* configuracion de los texto en el footer, imagenes, hover, 
+bordes y iconos de redes sociales 
+*/
+footer{
+	& h5{
+		font-size: 0.9rem;
+		letter-spacing: 1px;
+		& a{
+			text-decoration: none;
+			color: $color-white;
+			&:hover{
+				text-decoration: none;
+				color: $color-btn !important;
+			}
+		}
+	}
+	& h4{
+		font-size: 1.25rem;
+	}
+	& .bb1{
+		border-bottom: 1px solid $color-white !important;
+		line-height: 36px;
+	}
+	.hover-redes{
+		&:hover{
+			color: $color-green !important;
+			background-color: $color-btn !important;
+		}
+	}
+	& .no-hover{
+		&:hover{
+			background-color: transparent !important;
+			border-color: transparent !important;
+		}
+	}
+	.hover-redes{
+		padding: 5px 10px !important;
+		&:hover{
+			background-color: $color-btn;
+		}
+	}
+	.borde-visitanos{
+		border: 1px solid $color-white;
+	}
+	.end{
+		/*
+		Ultima barra de del footer configuracion
+		*/
+
+		background-color: #000;
+			a{
+			text-decoration: none;
+			.muva{
+				/* modificacion de imagen de MUVA */
+				height: 17px;
+				width: auto;
+			}
+			.ico-desarrollo{
+				/* modificacion de imagen de ICO-DESARROLLO */
+				height: 21px;
+				width: auto;
+			}
+		}
+	}
+}
